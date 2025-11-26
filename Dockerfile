@@ -1,45 +1,28 @@
-# file: Dockerfile
+FROM python:3.13-slim
 
-# ---------------------------------------------------------
-# STAGE 1 — Builder
-# ---------------------------------------------------------
-FROM python:3.12-slim AS builder
+# Variables
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PORT=8000
 
 WORKDIR /app
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+# Instalar dependencias del sistema necesarias para psycopg
+RUN apt-get update && apt-get install -y gcc libpq-dev && apt-get clean
 
-RUN apt-get update && \
-    apt-get install -y build-essential gcc && \
-    apt-get clean
-
+# Copiamos dependencias
 COPY requirements.txt .
 
-RUN pip install --upgrade pip && \
-    pip install --prefix=/install -r requirements.txt
+# Instalamos con psycopg moderno (tu URL lo necesita)
+RUN pip install --upgrade pip setuptools wheel \
+    && pip install "psycopg[binary]" \
+    && pip install -r requirements.txt
 
-# ---------------------------------------------------------
-# STAGE 2 — Final
-# ---------------------------------------------------------
-FROM python:3.12-slim
+# Copiamos el resto del proyecto
+COPY . .
 
-WORKDIR /app
-
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
-COPY --from=builder /install /usr/local
-COPY ./src ./src
-COPY ./alembic.ini .
-
-ENV PYTHONPATH=/app
-
+# Exponemos el puerto para Railway
 EXPOSE 8000
-ENV PORT=8000
 
-# Ejecutar Uvicorn directamente (Render-compatible)
-CMD uvicorn src.app.main:app --host 0.0.0.0 --port $PORT --workers 1
-
-# end file: Dockerfile
-
+# Comando final: Uvicorn ASGI directo
+CMD ["uvicorn", "src.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
