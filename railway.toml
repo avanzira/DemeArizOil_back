@@ -1,8 +1,0 @@
-[project]
-name = "deme-ariz-oil-back"
-
-[build]
-builder = "docker"
-
-[deploy]
-restart_policy_type = "always"
