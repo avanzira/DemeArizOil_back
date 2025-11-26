@@ -1,0 +1,56 @@
+# file: .gitignore
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# Ruff, Black, isort caches
+.ruff_cache/
+.formatter_cache/
+.cache/
+
+# Alembic artefacts
+src/app/db/migrations/versions/*.pyc
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Backups
+backups/
+*.sql
+
+# Node (por si añades frontend en el mismo repo)
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# end file: .gitignore

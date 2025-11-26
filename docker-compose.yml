@@ -1,0 +1,39 @@
+# file: docker-compose.yml
+
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: demearizoil_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: demeariz_user
+      POSTGRES_PASSWORD: demeariz_password
+      POSTGRES_DB: demeariz_oil
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    container_name: demearizoil_backend
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      DB_USER: demeariz_user
+      DB_PASSWORD: demeariz_password
+      DB_HOST: postgres
+      DB_NAME: demeariz_oil
+      SECRET_KEY: CHANGEMELOCAL
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+
+volumes:
+  postgres_data:
+
+# end file: docker-compose.yml

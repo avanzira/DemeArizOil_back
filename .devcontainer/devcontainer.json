@@ -1,0 +1,39 @@
+// file: .devcontainer/devcontainer.json
+{
+  "name": "DemeArizOil Backend Dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "backend",
+  "workspaceFolder": "/app",
+
+  "forwardPorts": [8000],
+
+  "portsAttributes": {
+    "8000": { "onAutoForward": "notify" }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.analysis.autoImportCompletions": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-azuretools.vscode-docker",
+        "batisteo.vscode-django",
+        "ms-python.black-formatter"
+      ]
+    }
+  },
+
+  "postCreateCommand": "",
+
+  "remoteUser": "root",
+
+  "mounts": ["source=${localWorkspaceFolder},target=/app,type=bind"]
+}
+// file: .devcontainer/devcontainer.json

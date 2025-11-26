@@ -1,0 +1,41 @@
+# file: .dockerignore
+
+# Git
+.git
+.gitignore
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual envs
+.venv/
+venv/
+
+# Tests y herramientas locales
+.pytest_cache/
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.formatter_cache/
+.cache/
+
+# Configuración local / editor
+.vscode/
+.idea/
+
+# Entornos
+.env
+.env.*
+
+# Backups y dumps
+backups/
+*.sql
+
+# Node (si añades frontend)
+node_modules/
+
+# end file: .dockerignore
