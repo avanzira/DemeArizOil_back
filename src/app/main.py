@@ -1,11 +1,11 @@
 # file: src/app/main.py
 from fastapi import FastAPI
 
-from app.api.api_router import api_router
-from app.security.middleware import apply_middlewares
-from app.security.cors import apply_cors
-from app.core.exceptions.handlers import register_exception_handlers
-from app.core.config.settings import settings
+from src.app.api.api_router import api_router
+from src.app.security.middleware import apply_middlewares
+from src.app.security.cors import apply_cors
+from src.app.core.exceptions.handlers import register_exception_handlers
+from src.app.core.config.settings import settings
 
 
 # Create application
