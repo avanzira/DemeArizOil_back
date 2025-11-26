@@ -42,9 +42,11 @@ ENV PORT=8000
 
 # Gunicorn + Uvicorn Worker (best practice)
 CMD gunicorn src.app.main:app \
+    --pythonpath /app \
     --worker-class uvicorn.workers.UvicornWorker \
     --bind 0.0.0.0:$PORT \
     --timeout 120 \
     --workers 1
+
 
 # end file: Dockerfile
