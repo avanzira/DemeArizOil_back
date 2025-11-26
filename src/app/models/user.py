@@ -3,8 +3,8 @@
 from datetime import datetime
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String, Integer, DateTime
-from app.db.base import Base
-from app.core.mixins.audit_mixin import AuditMixin
+from src.app.db.base import Base
+from src.app.core.mixins.audit_mixin import AuditMixin
 
 
 class User(Base, AuditMixin):

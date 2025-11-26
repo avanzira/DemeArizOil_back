@@ -1,6 +1,6 @@
 # file: src/app/repositories/line_sales_note_repository.py
 
-from app.models.line_sales_note import LineSalesNote
+from src.app.models.line_sales_note import LineSalesNote
 
 
 class LineSalesNoteRepository:

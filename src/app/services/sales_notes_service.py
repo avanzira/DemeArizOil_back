@@ -3,20 +3,20 @@
 from datetime import datetime
 from fastapi import HTTPException
 
-from app.services.base_service import BaseService
-from app.services.stock_service import StockService
-from app.services.cash_service import CashService
+from src.app.services.base_service import BaseService
+from src.app.services.stock_service import StockService
+from src.app.services.cash_service import CashService
 
-from app.repositories.sales_note_repository import SalesNoteRepository
-from app.repositories.line_sales_note_repository import LineSalesNoteRepository
-from app.repositories.customer_repository import CustomerRepository
-from app.repositories.product_repository import ProductRepository
-from app.repositories.stock_product_location_repository import StockProductLocationRepository
-from app.repositories.stock_location_repository import StockLocationRepository
+from src.app.repositories.sales_note_repository import SalesNoteRepository
+from src.app.repositories.line_sales_note_repository import LineSalesNoteRepository
+from src.app.repositories.customer_repository import CustomerRepository
+from src.app.repositories.product_repository import ProductRepository
+from src.app.repositories.stock_product_location_repository import StockProductLocationRepository
+from src.app.repositories.stock_location_repository import StockLocationRepository
 
-from app.schemas.sales_note_schemas import SalesNoteCreate
-from app.core.enums.stock_enums import StockMoveType
-from app.core.config.settings import settings
+from src.app.schemas.sales_note_schemas import SalesNoteCreate
+from src.app.core.enums.stock_enums import StockMoveType
+from src.app.core.config.settings import settings
 
 CENTRAL_ID = settings.CENTRAL_STOCK_LOCATION_ID
 

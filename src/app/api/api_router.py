@@ -1,15 +1,15 @@
 # file: src/app/api/api_router.py
 from fastapi import APIRouter
 
-from app.api.routers.products_router import router as products_router
-from app.api.routers.customers_router import router as customers_router
-from app.api.routers.suppliers_router import router as suppliers_router
-from app.api.routers.stock_router import router as stock_router
-from app.api.routers.cash_router import router as cash_router
-from app.api.routers.purchase_notes_router import router as purchase_notes_router
-from app.api.routers.sales_notes_router import router as sales_notes_router
-from app.api.routers.users_router import router as users_router
-from app.api.routers.auth_router import router as auth_router
+from src.app.api.routers.products_router import router as products_router
+from src.app.api.routers.customers_router import router as customers_router
+from src.app.api.routers.suppliers_router import router as suppliers_router
+from src.app.api.routers.stock_router import router as stock_router
+from src.app.api.routers.cash_router import router as cash_router
+from src.app.api.routers.purchase_notes_router import router as purchase_notes_router
+from src.app.api.routers.sales_notes_router import router as sales_notes_router
+from src.app.api.routers.users_router import router as users_router
+from src.app.api.routers.auth_router import router as auth_router
 
 api_router = APIRouter()
 

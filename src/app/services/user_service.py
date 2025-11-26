@@ -3,10 +3,10 @@
 from datetime import datetime
 from fastapi import HTTPException
 
-from app.services.base_service import BaseService
-from app.repositories.user_repository import UserRepository
-from app.security.password import hash_password, verify_password
-from app.schemas.user_schemas import (
+from src.app.services.base_service import BaseService
+from src.app.repositories.user_repository import UserRepository
+from src.app.security.password import hash_password, verify_password
+from src.app.schemas.user_schemas import (
     UserCreate,
     UserUpdate,
     ChangePasswordAdmin,

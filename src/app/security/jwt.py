@@ -5,9 +5,9 @@ from fastapi import HTTPException, Depends
 from fastapi.security import HTTPBearer
 import jwt
 
-from app.repositories.user_repository import UserRepository
-from app.core.config.database import get_session
-from app.core.config.settings import settings
+from src.app.repositories.user_repository import UserRepository
+from src.app.core.config.database import get_session
+from src.app.core.config.settings import settings
 
 auth_scheme = HTTPBearer()
 ALGORITHM = "HS256"

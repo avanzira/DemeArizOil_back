@@ -1,8 +1,8 @@
 # file: src/app/api/routers/products_router.py
 from fastapi import APIRouter, Depends
-from app.services.products_service import ProductsService
-from app.schemas.product_schemas import ProductCreate, ProductUpdate, ProductOut
-from app.security.jwt import get_current_user
+from src.app.services.products_service import ProductsService
+from src.app.schemas.product_schemas import ProductCreate, ProductUpdate, ProductOut
+from src.app.security.jwt import get_current_user
 
 router = APIRouter(prefix="/products", tags=["products"])
 

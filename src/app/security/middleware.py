@@ -1,7 +1,7 @@
 # file: src/app/security/middleware.py
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
-from app.core.config.settings import settings
+from src.app.core.config.settings import settings
 
 # Global middleware placeholder
 def apply_middlewares(app: FastAPI):

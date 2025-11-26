@@ -2,12 +2,12 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 
-from app.services.base_service import BaseService
-from app.core.enums.stock_enums import StockLocationType
-from app.repositories.customer_repository import CustomerRepository
-from app.repositories.stock_location_repository import StockLocationRepository
-from app.repositories.stock_product_location_repository import StockProductLocationRepository
-from app.schemas.customer_schemas import CustomerCreate, CustomerUpdate
+from src.app.services.base_service import BaseService
+from src.app.core.enums.stock_enums import StockLocationType
+from src.app.repositories.customer_repository import CustomerRepository
+from src.app.repositories.stock_location_repository import StockLocationRepository
+from src.app.repositories.stock_product_location_repository import StockProductLocationRepository
+from src.app.schemas.customer_schemas import CustomerCreate, CustomerUpdate
 
 class CustomersService(BaseService):
     repo_class = CustomerRepository

@@ -1,6 +1,6 @@
 # file: src/app/repositories/user_repository.py
-from app.repositories.base import BaseRepository
-from app.models.user import User
+from src.app.repositories.base import BaseRepository
+from src.app.models.user import User
 
 class UserRepository(BaseRepository):
     model = User

@@ -2,8 +2,8 @@
 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import Integer, Numeric, ForeignKey
-from app.db.base import Base
-from app.core.mixins.audit_mixin import AuditMixin
+from src.app.db.base import Base
+from src.app.core.mixins.audit_mixin import AuditMixin
 
 
 class LinePurchaseNote(Base, AuditMixin):

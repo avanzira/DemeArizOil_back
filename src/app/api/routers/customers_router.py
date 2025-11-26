@@ -1,8 +1,8 @@
 # file: src/app/api/routers/customers_router.py
 from fastapi import APIRouter, Depends
-from app.services.customers_service import CustomersService
-from app.schemas.customer_schemas import CustomerCreate, CustomerUpdate, CustomerOut
-from app.security.jwt import get_current_user
+from src.app.services.customers_service import CustomersService
+from src.app.schemas.customer_schemas import CustomerCreate, CustomerUpdate, CustomerOut
+from src.app.security.jwt import get_current_user
 
 router = APIRouter(prefix="/customers", tags=["customers"])
 

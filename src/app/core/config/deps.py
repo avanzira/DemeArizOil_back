@@ -1,6 +1,6 @@
 # file: src/app/core/config/deps.py
 
-from app.core.config.database import get_session
+from src.app.core.config.database import get_session
 from sqlalchemy.orm import Session
 
 def get_db() -> Session:

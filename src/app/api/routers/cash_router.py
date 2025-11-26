@@ -3,9 +3,9 @@
 
 
 from fastapi import APIRouter, Depends
-from app.services.cash_service import CashService
-from app.security.jwt import get_current_user
-from app.schemas.cash_schemas import CashMovementCreate, CashMovementOut
+from src.app.services.cash_service import CashService
+from src.app.security.jwt import get_current_user
+from src.app.schemas.cash_schemas import CashMovementCreate, CashMovementOut
 
 router = APIRouter(prefix="/cash", tags=["cash"])
 

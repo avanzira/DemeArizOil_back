@@ -4,8 +4,8 @@ from typing import Type
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from app.core.config.database import get_session
-from app.repositories.base import BaseRepository
+from src.app.core.config.database import get_session
+from src.app.repositories.base import BaseRepository
 
 
 class BaseService:

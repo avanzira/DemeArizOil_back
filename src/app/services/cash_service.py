@@ -4,9 +4,9 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from decimal import Decimal
 
-from app.core.config.database import get_session
-from app.repositories.cash_account_repository import CashAccountRepository
-from app.repositories.cash_movement_repository import CashMovementRepository
+from src.app.core.config.database import get_session
+from src.app.repositories.cash_account_repository import CashAccountRepository
+from src.app.repositories.cash_movement_repository import CashMovementRepository
 
 
 class CashService:

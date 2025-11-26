@@ -1,10 +1,10 @@
 # file: src/app/services/products_service.py
 from fastapi import HTTPException
 
-from app.services.base_service import BaseService
-from app.repositories.product_repository import ProductRepository
-from app.repositories.stock_product_location_repository import StockProductLocationRepository
-from app.schemas.product_schemas import ProductCreate, ProductUpdate
+from src.app.services.base_service import BaseService
+from src.app.repositories.product_repository import ProductRepository
+from src.app.repositories.stock_product_location_repository import StockProductLocationRepository
+from src.app.schemas.product_schemas import ProductCreate, ProductUpdate
 
 class ProductsService(BaseService):
     repo_class = ProductRepository

@@ -3,10 +3,10 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 
-from app.services.base_service import BaseService
-from app.repositories.supplier_repository import SupplierRepository
-from app.repositories.purchase_note_repository import PurchaseNoteRepository
-from app.schemas.supplier_schemas import SupplierCreate, SupplierUpdate
+from src.app.services.base_service import BaseService
+from src.app.repositories.supplier_repository import SupplierRepository
+from src.app.repositories.purchase_note_repository import PurchaseNoteRepository
+from src.app.schemas.supplier_schemas import SupplierCreate, SupplierUpdate
 
 class SuppliersService(BaseService):
     repo_class = SupplierRepository

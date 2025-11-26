@@ -1,8 +1,8 @@
 # file: src/app/api/routers/suppliers_router.py
 from fastapi import APIRouter, Depends
-from app.services.suppliers_service import SuppliersService
-from app.schemas.supplier_schemas import SupplierCreate, SupplierUpdate, SupplierOut
-from app.security.jwt import get_current_user
+from src.app.services.suppliers_service import SuppliersService
+from src.app.schemas.supplier_schemas import SupplierCreate, SupplierUpdate, SupplierOut
+from src.app.security.jwt import get_current_user
 
 router = APIRouter(prefix="/suppliers", tags=["suppliers"])
 

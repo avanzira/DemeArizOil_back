@@ -1,6 +1,6 @@
 # file: src/app/repositories/product_repository.py
-from app.repositories.base import BaseRepository
-from app.models.product import Product
+from src.app.repositories.base import BaseRepository
+from src.app.models.product import Product
 
 class ProductRepository(BaseRepository):
     model = Product

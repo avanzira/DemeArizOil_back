@@ -1,6 +1,6 @@
 # file: src/app/repositories/stock_product_location_repository.py
-from app.repositories.base import BaseRepository
-from app.models.stock_product_location import StockProductLocation
+from src.app.repositories.base import BaseRepository
+from src.app.models.stock_product_location import StockProductLocation
 
 class StockProductLocationRepository(BaseRepository):
     model = StockProductLocation

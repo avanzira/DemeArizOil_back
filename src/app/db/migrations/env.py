@@ -4,24 +4,24 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 from alembic import context
 
-from app.db.base import Base
-from app.core.config.settings import settings
+from src.app.db.base import Base
+from src.app.core.config.settings import settings
 
 # IMPORTACIÓN OBLIGATORIA DE TODOS LOS MODELOS
 # Sin estos imports, Alembic NO detecta las tablas
-import app.models.cash_account
-import app.models.cash_movement
-import app.models.customer
-import app.models.line_purchase_note
-import app.models.line_sales_note
-import app.models.product
-import app.models.purchase_note
-import app.models.sales_note
-import app.models.stock_location
-import app.models.stock_movement
-import app.models.stock_product_location
-import app.models.supplier
-import app.models.user
+import src.app.models.cash_account
+import src.app.models.cash_movement
+import src.app.models.customer
+import src.app.models.line_purchase_note
+import src.app.models.line_sales_note
+import src.app.models.product
+import src.app.models.purchase_note
+import src.app.models.sales_note
+import src.app.models.stock_location
+import src.app.models.stock_movement
+import src.app.models.stock_product_location
+import src.app.models.supplier
+import src.app.models.user
 
 # Alembic config
 config = context.config

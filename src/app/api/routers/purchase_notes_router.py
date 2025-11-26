@@ -1,11 +1,11 @@
 # file: src/app/api/routers/purchase_notes_router.py
 
 from fastapi import APIRouter, Depends
-from app.schemas.purchase_note_schemas import PurchaseNoteCreate, PurchaseNoteOut
-from app.services.purchase_notes_service import PurchaseNotesService
+from src.app.schemas.purchase_note_schemas import PurchaseNoteCreate, PurchaseNoteOut
+from src.app.services.purchase_notes_service import PurchaseNotesService
 from sqlalchemy.orm import Session
-from app.security.jwt import get_current_user
-from app.core.config.deps import get_db
+from src.app.security.jwt import get_current_user
+from src.app.core.config.deps import get_db
 
 router = APIRouter(prefix="/purchase-notes", tags=["purchase-notes"])
 

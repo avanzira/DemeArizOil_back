@@ -3,7 +3,7 @@
 from pydantic import BaseModel, ConfigDict, computed_field
 from datetime import datetime
 from typing import List
-from app.schemas.purchase_note_line_schemas import PurchaseNoteLineOut
+from src.app.schemas.purchase_note_line_schemas import PurchaseNoteLineOut
 
 
 class LinePurchaseInput(BaseModel):

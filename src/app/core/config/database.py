@@ -3,7 +3,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-from app.core.config.settings import settings
+from src.app.core.config.settings import settings
 
 
 _engine = create_engine(

@@ -3,8 +3,8 @@
 # usando funciones sueltas sin clases y services por endpoint.
 
 from fastapi import APIRouter, Depends
-from app.services.stock_service import StockService
-from app.security.jwt import get_current_user
+from src.app.services.stock_service import StockService
+from src.app.security.jwt import get_current_user
 
 router = APIRouter(prefix="/stock", tags=["stock"])
 

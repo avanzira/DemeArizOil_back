@@ -2,9 +2,9 @@
 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Integer
-from app.db.base import Base
-from app.core.enums.stock_enums import StockLocationType
-from app.core.mixins.audit_mixin import AuditMixin
+from src.app.db.base import Base
+from src.app.core.enums.stock_enums import StockLocationType
+from src.app.core.mixins.audit_mixin import AuditMixin
 
 
 class StockLocation(Base, AuditMixin):

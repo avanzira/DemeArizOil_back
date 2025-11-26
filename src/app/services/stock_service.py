@@ -3,12 +3,12 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from app.core.config.database import get_session
-from app.core.enums.stock_enums import StockMoveType
-from app.repositories.product_repository import ProductRepository
-from app.repositories.stock_location_repository import StockLocationRepository
-from app.repositories.stock_product_location_repository import StockProductLocationRepository
-from app.repositories.stock_movement_repository import StockMovementRepository
+from src.app.core.config.database import get_session
+from src.app.core.enums.stock_enums import StockMoveType
+from src.app.repositories.product_repository import ProductRepository
+from src.app.repositories.stock_location_repository import StockLocationRepository
+from src.app.repositories.stock_product_location_repository import StockProductLocationRepository
+from src.app.repositories.stock_movement_repository import StockMovementRepository
 
 
 class StockService:

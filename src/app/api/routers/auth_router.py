@@ -1,9 +1,9 @@
 # file: src/app/routers/auth_router.py
 
 from fastapi import APIRouter, Depends, Request
-from app.schemas.auth_schemas import LoginInput, RefreshInput, ChangePasswordInput
-from app.services.auth_service import AuthService
-from app.security.jwt import get_current_user
+from src.app.schemas.auth_schemas import LoginInput, RefreshInput, ChangePasswordInput
+from src.app.services.auth_service import AuthService
+from src.app.security.jwt import get_current_user
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

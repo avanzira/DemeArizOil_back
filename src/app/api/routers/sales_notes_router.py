@@ -2,9 +2,9 @@
 # Nota: funciones sueltas por recomendación FastAPI.
 
 from fastapi import APIRouter, Depends
-from app.services.sales_notes_service import SalesNotesService
-from app.schemas.sales_note_schemas import SalesNoteCreate
-from app.security.jwt import get_current_user
+from src.app.services.sales_notes_service import SalesNotesService
+from src.app.schemas.sales_note_schemas import SalesNoteCreate
+from src.app.security.jwt import get_current_user
 
 router = APIRouter(prefix="/sales-notes", tags=["sales_notes"])
 

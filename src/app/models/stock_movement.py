@@ -3,9 +3,9 @@
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import Integer, DateTime, ForeignKey, String
 from datetime import datetime
-from app.db.base import Base
-from app.core.enums.stock_enums import StockMoveType
-from app.core.mixins.audit_mixin import AuditMixin
+from src.app.db.base import Base
+from src.app.core.enums.stock_enums import StockMoveType
+from src.app.core.mixins.audit_mixin import AuditMixin
 
 
 class StockMovement(Base, AuditMixin):

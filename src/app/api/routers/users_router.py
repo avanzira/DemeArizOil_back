@@ -2,9 +2,9 @@
 # Nota: funciones sueltas por recomendación oficial de FastAPI.
 
 from fastapi import APIRouter, Depends
-from app.services.user_service import UserService
-from app.schemas.user_schemas import UserCreate, UserUpdate, ChangePasswordAdmin, UpdatePreferences
-from app.security.jwt import get_current_user
+from src.app.services.user_service import UserService
+from src.app.schemas.user_schemas import UserCreate, UserUpdate, ChangePasswordAdmin, UpdatePreferences
+from src.app.security.jwt import get_current_user
 
 router = APIRouter(prefix="/users", tags=["users"])
 

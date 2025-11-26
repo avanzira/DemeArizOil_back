@@ -3,23 +3,23 @@
 from datetime import datetime
 from fastapi import HTTPException
 
-from app.repositories.user_repository import UserRepository
-from app.core.config.database import get_session
+from src.app.repositories.user_repository import UserRepository
+from src.app.core.config.database import get_session
 
-from app.security.password import verify_password, hash_password
+from src.app.security.password import verify_password, hash_password
 
-from app.schemas.auth_schemas import (
+from src.app.schemas.auth_schemas import (
     LoginInput, RefreshInput, ChangePasswordInput,
     MFARequest, MFAVerify, UserOut
 )
-from app.security.captcha import validate_captcha
-from app.security.rate_limit import check_rate_limit
-from app.security.jwt import (
+from src.app.security.captcha import validate_captcha
+from src.app.security.rate_limit import check_rate_limit
+from src.app.security.jwt import (
     create_access_token,
     create_refresh_token,
     decode_token
 )
-from app.security.mfa import generate_mfa_code
+from src.app.security.mfa import generate_mfa_code
 
 
 class AuthService:
