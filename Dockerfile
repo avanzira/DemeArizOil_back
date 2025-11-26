@@ -36,17 +36,10 @@ COPY ./alembic.ini .
 ENV PYTHONPATH=/app
 
 EXPOSE 8000
-
-# Railway usa la variable PORT automáticamente
 ENV PORT=8000
 
-# Gunicorn + Uvicorn Worker (best practice)
-CMD gunicorn src.app.main:app \
-    --pythonpath /app \
-    --worker-class uvicorn.workers.UvicornWorker \
-    --bind 0.0.0.0:$PORT \
-    --timeout 120 \
-    --workers 1
-
+# Ejecutar Uvicorn directamente (Render-compatible)
+CMD uvicorn src.app.main:app --host 0.0.0.0 --port $PORT --workers 1
 
 # end file: Dockerfile
+
